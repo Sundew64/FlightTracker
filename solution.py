@@ -1,6 +1,8 @@
 import requests # import requests library for use
+from dotenv import dotenv_values
+dotenv=dotenv_values('.env')
 
-api_result = requests.get('https://api.aviationstack.com/v1/flights?access_key=705dfe02cd2777e1723680be7d9ca4f1') # requests the data from the endpoint
+api_result = requests.get(dotenv['API']) # requests the data from the endpoint
 # to add other parameters you can add "&parameter=value&parameter2=value2" etc.
 
 # Or you can do it this way
